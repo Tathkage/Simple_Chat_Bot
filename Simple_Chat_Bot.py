@@ -10,14 +10,63 @@ client = discord.Client()
 async def on_ready(): # Function or "event" called when the bot finishes logging in
     print('Howdy Tathluach! You have logged in as {0.user}'.format(client))
 
-
-# Example event when a user writes a message
+# Check messages
 @client.event
 async def on_message(message): # event called when the bot has received a message
     if message.author == client.user: # ignore messages from ourselves
         return
 
-    if message.content.startswith('Howdy'): # check if the message starts with '$hello'
+    # Filter pre-set curse words
+    if 'Fuck' in message.content or 'fuck' in message.content:
+        await message.delete()
+        await client.send_message(
+            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
+        )
+        return
+
+    if 'Bitch' in message.content or 'bitch' in message.content:
+        await message.delete()
+        await client.send_message(
+            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
+        )
+        return
+
+    if 'Whore' in message.content or 'whore' in message.content:
+        await message.delete()
+        await client.send_message(
+            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
+        )
+        return
+
+    if 'Bastard' in message.content or 'bastard' in message.content:
+        await message.delete()
+        await client.send_message(
+            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
+        )
+        return
+
+    if 'Shit' in message.content or 'shit' in message.content:
+        await message.delete()
+        await client.send_message(
+            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
+        )
+        return
+
+    if 'Nigga' in message.content or 'nigga' in message.content:
+        await message.delete()
+        await client.send_message(
+            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
+        )
+        return
+
+    if 'Nigger' in message.content or 'nigger' in message.content:
+        await message.delete()
+        await client.send_message(
+            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
+        )
+        return
+
+    if message.content == 'Howdy' or message.content == 'howdy': # check if the message starts with 'howdy'
         await message.channel.send('Gig \'em!') # send message in the channel it was used
 
 # Event to welcome new members
@@ -26,7 +75,6 @@ async def on_member_join(new_member):
     await new_member.channel.send(
         'Howdy {new_member.name}, welcome to the Tath server!'
     )
-
 
 # run both with my token
 client.run('OTc4MDcxNzIyNjQ3NDk0Njg2.GZai5K.VH_Nd2bzrJjdi2WTOc0AQ0sLlHbuMnnemtpBVA')
