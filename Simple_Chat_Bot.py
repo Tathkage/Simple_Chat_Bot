@@ -1,6 +1,8 @@
 # Importing the discord library
 import discord
 
+print("Test")
+
 # Create instance of a client to make a connection to discord
 client = discord.Client()
 
