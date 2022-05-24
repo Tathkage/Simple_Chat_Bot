@@ -13,57 +13,48 @@ async def on_ready(): # Function or "event" called when the bot finishes logging
 # Check messages
 @client.event
 async def on_message(message): # event called when the bot has received a message
+
+    # Variables used
+    member = discord.Member
+    user_message = f'You have been warned for cursing in The Tath Server.\n {message.author}\'s Message: {message.content}.'
+
     if message.author == client.user: # ignore messages from ourselves
         return
 
     # Filter pre-set curse words
     if 'Fuck' in message.content or 'fuck' in message.content:
         await message.delete()
-        await client.send_message(
-            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
-        )
+        await message.author.send(user_message)
         return
 
     if 'Bitch' in message.content or 'bitch' in message.content:
         await message.delete()
-        await client.send_message(
-            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
-        )
+        await message.author.send(user_message)
         return
 
     if 'Whore' in message.content or 'whore' in message.content:
         await message.delete()
-        await client.send_message(
-            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
-        )
+        await message.author.send(user_message)
         return
 
     if 'Bastard' in message.content or 'bastard' in message.content:
         await message.delete()
-        await client.send_message(
-            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
-        )
+        await message.author.send(user_message)
         return
 
     if 'Shit' in message.content or 'shit' in message.content:
         await message.delete()
-        await client.send_message(
-            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
-        )
+        await message.author.send(user_message)
         return
 
     if 'Nigga' in message.content or 'nigga' in message.content:
         await message.delete()
-        await client.send_message(
-            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
-        )
+        await message.author.send(user_message)
         return
 
     if 'Nigger' in message.content or 'nigger' in message.content:
         await message.delete()
-        await client.send_message(
-            'You have been warned for cursing in The Tath Server.\n {message.author}: {message.content}.'
-        )
+        await message.author.send(user_message)
         return
 
     if message.content == 'Howdy' or message.content == 'howdy': # check if the message starts with 'howdy'
