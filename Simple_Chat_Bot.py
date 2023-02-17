@@ -68,4 +68,4 @@ async def on_member_join(new_member):
     )
 
 # run both with my token
-client.run('OTc4MDcxNzIyNjQ3NDk0Njg2.GZai5K.VH_Nd2bzrJjdi2WTOc0AQ0sLlHbuMnnemtpBVA')
+client.run('')
