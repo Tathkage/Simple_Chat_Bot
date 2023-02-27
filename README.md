@@ -10,3 +10,6 @@ Chat Anti-Spam
 Images
 Utilities
 Coin Flip Game
+
+Disclaimer:
+Code includes foul language, for filtering purposes.
